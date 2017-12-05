@@ -66,6 +66,7 @@
       \ 'makefile=make',
       \ 'py=python'
       \ ]
+      \]
 
 - repo: rhysd/vim-gfm-syntax
   depends: vim-markdown
@@ -76,7 +77,7 @@
     let g:gfm_syntax_enable_filetypes = ['markdown']
 
 - repo: pangloss/vim-javascript
-  on_ft: [ javascript, jsx, javascript.jsx ]
+  on_ft: [javascript, jsx, javascript.jsx]
   hook_source: |
     let g:javascript_plugin_jsdoc = 1
     let g:javascript_plugin_flow = 1
@@ -95,10 +96,10 @@
   hook_source: let g:vim_jsx_pretty_colorful_config = 1
 
 # pangloss/javascript vs. othree/yajs
-#- { repo: othree/yajs.vim, on_ft: [ javascript, jsx, javascript.jsx ]}
-#- { repo: gavocanov/vim-js-indent, on_ft: [ javascript, jsx, javascript.jsx ]}
+#- {repo: othree/yajs.vim, on_ft: [javascript, jsx, javascript.jsx]}
+#- {repo: gavocanov/vim-js-indent, on_ft: [javascript, jsx, javascript.jsx]}
 #- repo: mxw/vim-jsx
-#  on_ft: [ javascript, jsx, javascript.jsx ]
+#  on_ft: [javascript, jsx, javascript.jsx]
 #  hook_source: let g:jsx_ext_required = 0
 
 - repo: fatih/vim-go
@@ -158,6 +159,18 @@
 - { repo: othree/nginx-contrib-vim, on_ft: nginx }
 - { repo: IN3D/vim-raml, on_ft: raml }
 
+- repo: rust-lang/rust.vim
+  on_ft: rust
+  hook_source: |
+    let g:rustfmt_autosave = 1
+
+- {repo: slashmili/alchemist.vim, on_ft: [ex, exs, eex, elixir]}
+- {repo: huffman/vim-elixir, on_ft: [ex, exs, eex, elixir]}
+
+- {repo: Quramy/tsuquyomi, on_ft: [ts, typescript]}
+- {repo: leafgarland/typescript-vim, on_ft: [ts, typescript]}
+- {repo: jason0x43/vim-js-indent, on_ft: [ts, typescript]}
+
 # ==========================================
 # Commands
 # --------
@@ -216,11 +229,11 @@
   hook_add: let g:vinarise_enable_auto_detect = 1
 
 - repo: mzlogin/vim-markdown-toc
-  on_cmd: [ GenTocGFM, GenTocRedcarpet, GenTocGitLab, UpdateToc ]
+  on_cmd: [GenTocGFM, GenTocRedcarpet, GenTocGitLab, UpdateToc]
   hook_source: let g:vmt_auto_update_on_save = 0
 
 - repo: easymotion/vim-easymotion
-  on_map: { n: <Plug> }
+  on_map: {n: <Plug>}
   hook_source: |
     let g:EasyMotion_do_mapping = 0
     let g:EasyMotion_prompt = 'Jump to → '
@@ -237,7 +250,7 @@
   hook_source: |
     let g:tagbar_width = 40
     if executable('jsctags')
-      let g:tagbar_type_javascript = { 'ctagsbin': 'jsctags' }
+      let g:tagbar_type_javascript = {'ctagsbin': 'jsctags'}
     endif
 
 - repo: beloglazov/vim-online-thesaurus
@@ -260,7 +273,7 @@
     let g:gitgutter_sh = $SHELL
 
 - repo: nathanaelkane/vim-indent-guides
-  on_cmd: [ IndentGuidesEnable, IndentGuidesDisable, IndentGuidesToggle ]
+  on_cmd: [IndentGuidesEnable, IndentGuidesDisable, IndentGuidesToggle]
   hook_post_source: |
     call indent_guides#init_script_vars()
     call indent_guides#highlight_colors()
@@ -302,7 +315,7 @@
       \  'yaml.ansible', 'python', 'php', 'ruby', 'vim', 'go', 'sh',
       \  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
       \  'markdown', 'html', 'yaml'
-      \ ]
+      \]
     autocmd MyAutoCmd BufWritePost *
       \  if expand('%:p') !~ $VIMPATH
       \      && index(g:lint_types, &filetype) > -1
@@ -338,16 +351,16 @@
     let g:vimwiki_autowriteall = 0
   hook_source: |
     let g:vimwiki_list = [
-    \   { 'diary_header': 'Diary',
+    \   {'diary_header': 'Diary',
     \     'diary_link_fmt': '%Y-%m/%d',
     \     'auto_toc': 1,
     \     'path': '~/docs/wiki/',
     \     'syntax': 'markdown',
-    \     'ext': '.md' },
-    \   { 'path': '~/docs/blog/',
+    \     'ext': '.md'},
+    \   {'path': '~/docs/blog/',
     \     'syntax': 'markdown',
-    \     'ext': '.md' }
-    \ ]
+    \     'ext': '.md'}
+    \]
 
 # ==========================================
 # Completion
@@ -383,7 +396,7 @@
     let g:gutentags_ctags_exclude = [
       \ '*/wp-admin', '*/wp-content', '*/wp-includes',
       \ '*/application/vendor', '*/vendor/ckeditor', '*/media/vendor'
-      \ ]
+      \]
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
@@ -502,19 +515,19 @@
 # ==========================================
 # Operators
 # ---------
-- { repo: kana/vim-operator-user, lazy: 1 }
+- {repo: kana/vim-operator-user, lazy: 1}
 
 - repo: kana/vim-operator-replace
   depends: vim-operator-user
-  on_map: { vnx: <Plug> }
+  on_map: {vnx: <Plug>}
 
 - repo: rhysd/vim-operator-surround
-  depends: [ vim-operator-user, vim-textobj-multiblock ]
-  on_map: { vnx: <Plug> }
+  depends: [vim-operator-user, vim-textobj-multiblock]
+  on_map: {vnx: <Plug>}
 
 - repo: haya14busa/vim-operator-flashy
   depends: vim-operator-user
-  on_map: { nx: <Plug> }
+  on_map: {nx: <Plug>}
 
 # ==========================================
 # Text objects
@@ -526,17 +539,17 @@
 - { repo: AndrewRadev/linediff.vim, on_cmd: Linediff }
 
 - repo: AndrewRadev/dsf.vim
-  on_map: { n: <Plug>Dsf }
+  on_map: {n: <Plug>Dsf}
   hook_add: let g:dsf_no_mappings = 1
 
 - repo: osyo-manga/vim-textobj-multiblock
   depends: vim-textobj-user
-  on_map: { ox: <Plug> }
+  on_map: {ox: <Plug>}
   hook_add: let g:textobj_multiblock_no_default_key_mappings = 1
 
 - repo: kana/vim-textobj-function
   depends: vim-textobj-user
-  on_map: { ox: <Plug> }
+  on_map: {ox: <Plug>}
   hook_add: let g:textobj_function_no_default_key_mappings = 1
 
 #  vim: set ts=2 sw=2 tw=80 et :
