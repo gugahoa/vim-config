@@ -49,6 +49,8 @@ if executable('rg')
 	call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 	call denite#custom#var('grep', 'separator', ['--'])
 	call denite#custom#var('grep', 'final_opts', [])
+	call denite#custom#var('grep', 'default_opts',
+		\ [ '--skip-vcs-ignores', '--vimgrep', '--smart-case', '--hidden' ])
 
 elseif executable('ag')
 	" The Silver Searcher
