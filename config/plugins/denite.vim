@@ -39,9 +39,11 @@ call denite#custom#source(
 
 " FIND and GREP COMMANDS
 if executable('rg')
+	" Rip Grep
 	call denite#custom#var('file_rec', 'command',
-		\ ['rg', '--files', '--glob', '!.git', ''])
-
+		\ ['rg', '--files', '--glob', '!.git'])
+	"
+	" Ripgrep command on grep source
 	call denite#custom#var('grep', 'command', ['rg'])
 	call denite#custom#var('grep', 'default_opts',
 			\ ['--vimgrep', '--no-heading'])
