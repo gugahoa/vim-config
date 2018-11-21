@@ -40,7 +40,7 @@ call denite#custom#source(
 " FIND and GREP COMMANDS
 if executable('rg')
 	" Rip Grep
-	call denite#custom#var('file_rec', 'command',
+	call denite#custom#var('file/rec', 'command',
 		\ ['rg', '--files', '--glob', '!.git'])
 	"
 	" Ripgrep command on grep source
