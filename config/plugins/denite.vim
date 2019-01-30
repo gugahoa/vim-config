@@ -41,7 +41,7 @@ call denite#custom#source(
 if executable('rg')
 	" Rip Grep
 	call denite#custom#var('file/rec', 'command',
-		\ ['rg', '--files', '--glob', '!.git'])
+		\ ['rg', '--files', '--hidden', '-g', '!{.git,node_modules,dist,build}'])
 	"
 	" Ripgrep command on grep source
 	call denite#custom#var('grep', 'command', ['rg'])
@@ -52,7 +52,7 @@ if executable('rg')
 	call denite#custom#var('grep', 'separator', ['--'])
 	call denite#custom#var('grep', 'final_opts', [])
 	call denite#custom#var('grep', 'default_opts',
-		\ [ '--skip-vcs-ignores', '--vimgrep', '--smart-case', '--hidden' ])
+		\ [ '--vimgrep', '--smart-case', '--hidden' ])
 
 elseif executable('ag')
 	" The Silver Searcher

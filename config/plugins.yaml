@@ -383,7 +383,9 @@
 
     let g:LanguageClient_serverCommands = {
         \ 'rust': ['rls'],
-        \ 'reason': ['/home/gugah/.local/bin/reason-language-server'],
+        \ 'reason': ['reason-language-server'],
+        \ 'python': ['pyls'],
+        \ 'javascript': ['javascript-typescript-stdio']
         \ }
 
     nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
@@ -425,7 +427,7 @@
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
-  on_ft: [ html, css, jsx, javascript, javascript.jsx ]
+  on_ft: [ html, css, jsx, javascript, javascript.jsx, reason ]
   hook_source: |
     let g:use_emmet_complete_tag = 0
     let g:user_emmet_install_global = 0

@@ -93,7 +93,7 @@ if dein#tap('neosnippet.vim')
 endif
 
 if dein#tap('emmet-vim')
-	autocmd MyAutoCmd FileType html,css,jsx,javascript,javascript.jsx
+	autocmd MyAutoCmd FileType html,css,jsx,javascript,javascript.jsx,reason
 		\ EmmetInstall
 		\ | imap <buffer> <C-Return> <Plug>(emmet-expand-abbr)
 endif

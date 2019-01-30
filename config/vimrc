@@ -190,5 +190,6 @@ endif
 set secure
 
 let g:python3_host_prog = '/usr/bin/python3'
+set relativenumber
 
 " vim: set ts=2 sw=2 tw=80 noet :
