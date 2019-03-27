@@ -254,6 +254,7 @@ if dein#tap('vimagit')
 endif
 
 if dein#tap('vim-easygit')
+	nnoremap <silent> <leader>ga :Gadd<CR>
 	nnoremap <silent> <leader>gd :Gdiff<CR>
 	nnoremap <silent> <leader>gD :Gdiffoff<CR>
 	nnoremap <silent> <leader>gc :Gcommit<CR>
