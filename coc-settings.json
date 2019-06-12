@@ -1,0 +1,15 @@
+{
+  "languageserver": {
+    "reason": {
+      "command": "reason-language-server",
+      "filetypes": ["reason"]
+    },
+    "elixirLS": {
+      "command": "/home/gugah/.elixir_ls/rel/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
+    }
+  },
+  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+  "python.jediEnabled": false,
+  "emmet.includeLanguages": {"javascript": "javascriptreact", "reason": "javascriptreact"}
+}
