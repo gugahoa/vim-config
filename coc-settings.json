@@ -4,6 +4,11 @@
       "command": "reason-language-server",
       "filetypes": ["reason"]
     },
+    "ocaml": {
+      "command": "ocaml-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["ocaml", "reason"]
+    },
     "elixirLS": {
       "command": "/home/gugah/.elixir_ls/rel/language_server.sh",
       "filetypes": ["elixir", "eelixir"]
