@@ -158,7 +158,6 @@ endif
 call s:source_file('plugins/all.vim')
 
 filetype plugin indent on
-syntax enable
 
 " if ! has('vim_starting')
 	call dein#call_hook('source')

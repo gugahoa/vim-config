@@ -9,7 +9,5 @@
       "filetypes": ["elixir", "eelixir"]
     }
   },
-  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
-  "python.jediEnabled": false,
   "emmet.includeLanguages": {"javascript": "javascriptreact", "reason": "javascriptreact"}
 }
